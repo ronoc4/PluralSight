@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github</title>
+    <!-- [if lt IE 9]>
+     <foo>
+    <![endif]-->
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div><img src="Octocat.png" alt="Github logo" height="200px" class="bordered-image"/></div>
+        <div> This is a site to search Github for projects</div>
+
+    </header>
+    <section id="main">
+        <p>In this <i>simple</i> site, we'll show a list of <a href="http://github.com" target="_blank">Github</a> <span>projects </span>
+            and the <strong>data</strong>.
+        </p>
+        <form action="http://wilder.azurewebsites.net/echo" method="get" class="simple-form bordered-image" id="gitHutSearchForm">
+            <label for="searchPhrase">Search Phrase:</label>
+            <input type="text" name="searchPhrase" id="searchPhrase"/><br/>
+            <input type="checkbox" name="useStars" id="useStars" checked="true"><label for="useStars"> Use Stars?</label><br>
+            <select name="langChoice">
+                <option selected>All</option>
+                <option>Javascript</option>
+                <option>C#</option>
+                <option>Java</option>
+                <option>Ruby</option>
+            </select>
+            <br>
+            <input type="submit" value="search">
+        </form>
+        <div id="results" class="bordered-image">
+            <button id="toggleButton">Hide</button>
+            <div id="resultsList"><p>This is where the results will go... eventually</p></div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2017 Conor Budge
+    </footer>
+</div>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
