@@ -57,10 +57,10 @@ toggleButton.on('click', function () {
 
             resultsList.text("Performing search...");
 
-            let gitHubSearch = "https://api.github.com/search/repositories?q=" + searchPhrase;
+            let gitHubSearch = "https://api.github.com/search/repositories?q=" + encodeURIComponent(searchPhrase);
 
             if(langChoice != "All") {
-                gitHubSearch += "language:" + langChoice;
+                gitHubSearch += "+language:" + encodeURIComponent(langChoice);
             }
             if(useStars) {
                 gitHubSearch += "&sort=stars";
